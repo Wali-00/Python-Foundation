@@ -53,4 +53,10 @@ class Cooling_Mechanism:
     def cooling_on(self):
         print(f"system is begin cooling by {self.cooling_mode}")
 
-    
+class Smartphone_coolingMode(Smartphone,Cooling_Mechanism):
+    def __init__(self, model, battery, camera, processor,cooling_mode):
+        Smartphone.__init__(self,model, battery, camera, processor)
+        Cooling_Mechanism.__init__(self,cooling_mode)
+
+pro_cooling = Smartphone_coolingMode("Black Shark",6000,108,"Snapdragon","Nitrogen")
+print(vars(pro_cooling))
