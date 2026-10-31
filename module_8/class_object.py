@@ -28,3 +28,29 @@ print(vars(Iphone))
 print(Iphone.battery_percentage)
 Iphone.capture(10)
 print(Iphone.battery_percentage)
+
+
+#inheritance
+
+#child/derived class
+class Smartphone(phone):
+    def __init__(self, model, battery, camera, processor):
+        super().__init__(model, battery, camera)
+        self.processor = processor
+
+    def charge(self, hour):
+        print("First charging is process")
+        super().charge(hour)
+
+pro = Smartphone("Iphone18",57000,108,"A26")
+print(pro.processor)
+pro.charge(10)
+
+class Cooling_Mechanism:
+    def __init__(self,cooling_mode):
+        self.cooling_mode = cooling_mode
+
+    def cooling_on(self):
+        print(f"system is begin cooling by {self.cooling_mode}")
+
+    
