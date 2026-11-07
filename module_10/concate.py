@@ -12,3 +12,7 @@ concate_column= np.concatenate((a,b),axis=1)#column wise
 
 mat = np.array([[10,20,30],[40,50,60]])
 tran = mat.T
+
+#split
+a = np.random.randint(1,10, size=(10,))
+split = np.array_split(a,3)
