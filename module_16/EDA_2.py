@@ -18,3 +18,10 @@ sns.barplot(x=df['Survived'],y=df['Age'])
 
 #kde plot for categorical discrepancy
 sns.kdeplot(data=df, x='Age',y='Survived')
+
+
+#scatter plot 
+df= sns.load_dataset('tips')
+
+sns.scatterplot(data= df , x= 'total_bill',y='tip',hue='sex',size='size')
+
