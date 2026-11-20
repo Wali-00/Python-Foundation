@@ -15,3 +15,6 @@ print(gender_split)
 sns.barplot(x=df['Pclass'],y=['Fare'])
 sns.barplot(x=df['Survived'],y=df['Age'],hue=df['Sex'])
 sns.barplot(x=df['Survived'],y=df['Age'])
+
+#kde plot for categorical discrepancy
+sns.kdeplot(data=df, x='Age',y='Survived')
